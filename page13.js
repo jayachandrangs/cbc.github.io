@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function exportToCSV() {
         const csvContent = "data:text/csv;charset=utf-8," 
-            + sortedPlayers.map(player => `${player.name},${player.division}`).join("\n");
+            + sortedPlayers.map(player => `"${player.name},${player.division}",`).join("\n");
 
         const encodedUri = encodeURI(csvContent);
         const link = document.createElement("a");
