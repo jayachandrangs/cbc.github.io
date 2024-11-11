@@ -50,7 +50,7 @@ function loadPlayers() {
       const playerDiv = document.createElement('div');
       playerDiv.classList.add('player-div');
       playerDiv.onclick = () => togglePlayerNumber(playerName, playerDiv);
-      playerDiv.innerText = `${playerName} - ${division.trim()}`;
+      playerDiv.innerText = `${playerName}`;
       playerDiv.id = `player-${playerName.replace(/\s+/g, '-')}`;
       playerButtonsDiv.appendChild(playerDiv);
 
